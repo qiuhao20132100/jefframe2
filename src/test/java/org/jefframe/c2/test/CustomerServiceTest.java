@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 public class CustomerServiceTest {
     private final CustomerService customerService;
@@ -25,6 +26,12 @@ public class CustomerServiceTest {
         long id = 1;
         Customer customer = customerService.getCustomer(id);
         Assert.assertNotNull(customer);
+    }
+
+    @Test
+    public void getCustomerListTest() throws Exception{
+        List<Customer> customerList = customerService.getCustomerList();
+        Assert.assertNotNull(customerList);
     }
 
     @Test
